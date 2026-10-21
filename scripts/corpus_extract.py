@@ -28,16 +28,18 @@ TESTO:
 
 
 def key():
-    for line in (pathlib.Path("/home/agent/.hermes/.env")).read_text().splitlines():
-        if line.startswith("DEEPSEEK_API_KEY="):
-            return line.split("=", 1)[1].strip().strip('"').strip("'")
-    return os.environ.get("DEEPSEEK_API_KEY", "")
+    """Ključ isključivo iz okoline — nikad iz datoteke u repozitoriju."""
+    k = os.environ.get("LLM_API_KEY") or os.environ.get("DEEPSEEK_API_KEY", "")
+    if not k:
+        print("Postavi LLM_API_KEY (ili DEEPSEEK_API_KEY) u okolinu.")
+    return k
 
 
 def call(prompt, k):
-    body = json.dumps({"model": "deepseek-chat", "temperature": 0.1, "max_tokens": 3000,
+    body = json.dumps({"model": os.environ.get("LLM_MODEL", "deepseek-chat"), "temperature": 0.1, "max_tokens": 3000,
                        "messages": [{"role": "user", "content": prompt}]}).encode()
-    req = urllib.request.Request("https://api.deepseek.com/chat/completions", data=body,
+    base = os.environ.get("LLM_BASE_URL", "https://api.deepseek.com/v1").rstrip("/")
+    req = urllib.request.Request(base + "/chat/completions", data=body,
                                  headers={"Content-Type": "application/json",
                                           "Authorization": "Bearer " + k}, method="POST")
     with urllib.request.urlopen(req, timeout=240) as r:

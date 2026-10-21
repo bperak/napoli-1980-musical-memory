@@ -1,33 +1,36 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """Estrattore: iz teksta arhivske stranice (novine, fanzine, imenik) vadi mjesta u strukturirane retke.
-Izlaz ima istu shemu kao attestati.csv, plus citat i datoteka izvora — da se svaki redak može provjeriti."""
+Izlaz ima istu shemu kao attestati.csv, plus citat i datoteka izvora — da se svaki redak može provjeriti.
+
+Backend se ne bira u kodu nego u okolini (vidi README, odjeljak „Bring your own model"):
+  LLM_BASE_URL   — OpenAI-kompatibilni endpoint, npr. https://api.deepseek.com/v1
+  LLM_API_KEY    — ključ za taj endpoint
+  LLM_MODEL      — naziv modela kod tog endpointa
+Ne postoji zadani host: ako varijable nisu postavljene, skripta stane s uputom.
+"""
 import argparse
 import csv
 import json
+import os
 import pathlib
 import re
 import sys
 import time
 import urllib.request
 
-BASE = pathlib.Path("/home/agent/napoli1980")
-ENV_FILE = pathlib.Path("/home/agent/.gemma4_cf.env")
+BASE = pathlib.Path(__file__).resolve().parent.parent
 
 
-def env() -> dict:
-    out = {}
-    if ENV_FILE.exists():
-        for line in ENV_FILE.read_text().splitlines():
-            if "=" in line and not line.strip().startswith("#"):
-                k, v = line.split("=", 1)
-                out[k.strip()] = v.strip().strip('"').strip("'")
-    return out
+def endpoint() -> tuple[str, str, str]:
+    base = os.environ.get("LLM_BASE_URL", "").rstrip("/")
+    key = os.environ.get("LLM_API_KEY", "")
+    model = os.environ.get("LLM_MODEL", "")
+    if not (base and key and model):
+        sys.exit("Postavi LLM_BASE_URL, LLM_API_KEY i LLM_MODEL (bilo koji OpenAI-kompatibilni "
+                 "endpoint, vlastiti ključ). Skripta namjerno nema zadani host.")
+    return base + "/chat/completions", key, model
 
 
-E = env()
-ENDPOINT = "https://gemma4.syntagent.com/v1/chat/completions"
-MODEL = "gemma-4-26b-a4b-nvfp4"
+ENDPOINT, API_KEY, MODEL = endpoint()
 
 PROMPT = """Sei un estrattore di dati storici. Ti do il testo di una pagina d'archivio su Napoli (anni 1970-1990).
 Estrai SOLO i luoghi musicali realmente nominati nel testo: negozi di dischi, club, discoteche, bar con musica,
@@ -52,8 +55,7 @@ def call(text: str) -> str:
                "messages": [{"role": "user", "content": PROMPT.replace("{testo}", text)}]}
     req = urllib.request.Request(ENDPOINT, data=json.dumps(payload).encode(),
                                  headers={"Content-Type": "application/json",
-                                          "CF-Access-Client-Id": E.get("GEMMA4_CF_CLIENT_ID", ""),
-                                          "CF-Access-Client-Secret": E.get("GEMMA4_CF_CLIENT_SECRET", ""),
+                                          "Authorization": "Bearer " + API_KEY,
                                           "User-Agent": "Napoli80Archivio/1.0"},
                                  method="POST")
     with urllib.request.urlopen(req, timeout=300) as r:

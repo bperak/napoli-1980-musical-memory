@@ -46,8 +46,9 @@ Live versions:
 `quartiere`, `anni`, `citazione`, `fonte`. The prompt forbids invention and requires the exact sentence for every
 row; the parser rejects anything that does not come back as a JSON array.
 
-Three backends, tried in order so a blocked quota does not stop the work: Gemini, DeepSeek, and the local Gemma 4
-26B on the DGX Spark. Keys are read from Colab Secrets or from the environment — never from the repository.
+Backends are tried in order so a blocked quota does not stop the work: Gemini, DeepSeek, or any OpenAI-compatible
+endpoint you supply through `LLM_BASE_URL`, `LLM_API_KEY` and `LLM_MODEL`. **Bring your own key.** The repository and
+the notebook contain no endpoint and no credential, and none of the author's infrastructure is reachable from them.
 
 A deterministic second pass runs beside the model for the constructions the model skips — *"lo ZX di via Atri"*,
 *"si chiama Cantina Sica"*, *"aprono il Diamond Dogs"*. The output carries a `metodo` column, so it is always
