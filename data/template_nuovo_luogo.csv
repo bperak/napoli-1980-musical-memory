@@ -1,0 +1,2 @@
+nome,tipo,via,quartiere,anni,lat,lon,precisione,livello,citazione,documenti,geo_fonte
+ESEMPIO — cancellare questa riga,club,via Esempio 1,Quartiere,1980-1985,40.8518,14.2681,via,C,"la frase esatta copiata dalla fonte, massimo trenta parole",Nome della pubblicazione e data di consultazione,nominatim

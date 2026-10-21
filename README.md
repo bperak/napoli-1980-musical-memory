@@ -123,7 +123,8 @@ The table is open. Three ways in, and the easiest needs no git at all:
 The rule is one sentence: **no row without a citation, no citation without a source.** A model's suggestion is a
 lead, not a datum. Full instructions, the column-by-column schema, the evidence levels, where to find the sources,
 and three exercises a student can complete in an afternoon are in **[CONTRIBUTING.md](CONTRIBUTING.md)** — in
-English and in Italian.
+English and in Italian. A one-page Italian guide for seminar participants who have never used GitHub is
+**[STUDENTS.md](STUDENTS.md)**, with a fill-in template at `data/template_nuovo_luogo.csv`.
 
 Before proposing a change, run `scripts/check_data.py`: it verifies that no row lacks a quote or a source, that no
 name is duplicated, and that coordinates fall inside Naples.

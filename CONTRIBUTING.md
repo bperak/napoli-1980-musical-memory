@@ -120,6 +120,9 @@ place.
 
 ## 5. If you are a student
 
+A one-page version of everything below, in Italian, written for a seminar participant who has never used GitHub —
+account, the issue form, the template file, the three exercises — is in **[STUDENTS.md](STUDENTS.md)**.
+
 Three exercises that produce a real, citable result and take an afternoon:
 
 **Exercise 1 — Verify a candidate.** Take a name from `data/registro_verifica.json` (30 candidates that only the
@@ -183,6 +186,9 @@ scope.
 ---
 
 ## In italiano
+
+Per gli studenti c'è una pagina sola, pratica e in italiano: **[STUDENTS.md](STUDENTS.md)** — dall'account GitHub al
+modulo da compilare, con il modello `data/template_nuovo_luogo.csv`.
 
 Questo repository è un tavolo di lavoro condiviso. Si può contribuire in tre modi: aprendo una **issue** con il
 modulo «Add a place» (serve solo un account GitHub, due minuti), modificando il CSV **direttamente nel browser** con
