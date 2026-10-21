@@ -5,7 +5,6 @@ import json
 import pathlib
 import sys
 
-sys.path.insert(0, "/home/agent/.hermes/skills/productivity/google-workspace/scripts")
 from google_api import build_service  # noqa: E402
 from googleapiclient.http import MediaFileUpload  # noqa: E402
 
@@ -208,7 +207,7 @@ def doc():
         {"insertText": {"location": {"index": 1}, "text": text}}]}).execute()
     dr.permissions().create(fileId=did, body={"role": "reader", "type": "anyone"}).execute()
     pdf = dr.files().export(fileId=did, mimeType="application/pdf").execute()
-    out = pathlib.Path("/home/agent/napoli1980/seminar_federico/Napoli_1980_Guida_alle_fonti.pdf")
+    out = pathlib.Path(__file__).resolve().parent.parent / "seminar_federico/Napoli_1980_Guida_alle_fonti.pdf"
     out.write_bytes(pdf)
     return did, out
 
@@ -217,5 +216,5 @@ if __name__ == "__main__":
     sid = sheet()
     did, pdf = doc()
     ids = {"sheet_fonti": sid, "doc_guida": did, "pdf": str(pdf)}
-    pathlib.Path("/home/agent/napoli1980/fonti_ids.json").write_text(json.dumps(ids, indent=1))
+    pathlib.Path(__file__).resolve().parent.parent / "fonti_ids.json".write_text(json.dumps(ids, indent=1))
     print("fonti:", len(SRC), "| sheet:", sid, "| doc:", did, "| pdf:", pdf, pdf.stat().st_size, "B")

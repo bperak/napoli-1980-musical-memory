@@ -6,8 +6,8 @@ import pathlib
 import sys
 import traceback
 
-NB = pathlib.Path("/home/agent/napoli1980/Napoli_1980_musical_memory_map.ipynb")
-WORKDIR = "/home/agent/napoli1980"
+NB = pathlib.Path(__file__).resolve().parent.parent / "Napoli_1980_musical_memory_map.ipynb"
+WORKDIR = str(pathlib.Path(__file__).resolve().parent.parent)
 
 
 class _Stub:

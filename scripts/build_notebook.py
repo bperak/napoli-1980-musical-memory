@@ -4,7 +4,7 @@
 import json
 import pathlib
 
-OUT = pathlib.Path("/home/agent/napoli1980/Napoli_1980_musical_memory_map.ipynb")
+OUT = pathlib.Path(__file__).resolve().parent.parent / "Napoli_1980_musical_memory_map.ipynb"
 
 
 def md(src):

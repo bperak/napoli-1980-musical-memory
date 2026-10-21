@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import contextily as cx
 
 warnings.filterwarnings("ignore")
-BASE = "/home/agent/napoli1980/"
+BASE = str(pathlib.Path(__file__).resolve().parent.parent) + "/"
 
 GAZ = {
     "via atri": (40.8515, 14.2545), "via costantinopoli": (40.8516, 14.2517),

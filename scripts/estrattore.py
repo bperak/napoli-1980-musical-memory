@@ -16,8 +16,11 @@ import re
 import sys
 import time
 import urllib.request
-
+# --- putanje: skripte rade i u repozitoriju (data/, maps/) i u ravnom radnom direktoriju ---
 BASE = pathlib.Path(__file__).resolve().parent.parent
+DATA = BASE / "data" if (BASE / "data").is_dir() else BASE
+MAPS = BASE / "maps" if (BASE / "maps").is_dir() else BASE
+
 
 
 def endpoint() -> tuple[str, str, str]:

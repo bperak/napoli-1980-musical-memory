@@ -12,7 +12,7 @@ import pandas as pd
 import contextily as cx
 
 warnings.filterwarnings("ignore")
-BASE = pathlib.Path("/home/agent/napoli1980")
+BASE = pathlib.Path(__file__).resolve().parent.parent
 df = pd.read_csv(BASE / "napoli1980_places_enriched.csv")
 df = df.dropna(subset=["lat", "lon"])
 print("točaka:", len(df))

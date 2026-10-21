@@ -9,11 +9,11 @@ import pathlib
 import sys
 import traceback
 
-NB_IN = pathlib.Path("/home/agent/napoli1980/Napoli_1980_musical_memory_map.ipynb")
-NB_OUT = pathlib.Path("/home/agent/napoli1980/Napoli_1980_musical_memory_map_executed.ipynb")
+NB_IN = pathlib.Path(__file__).resolve().parent.parent / "Napoli_1980_musical_memory_map.ipynb"
+NB_OUT = pathlib.Path(__file__).resolve().parent.parent / "Napoli_1980_musical_memory_map_executed.ipynb"
 
 import os
-os.chdir("/home/agent/napoli1980")
+os.chdir(str(pathlib.Path(__file__).resolve().parent.parent))
 
 import matplotlib
 matplotlib.use("Agg")
@@ -68,7 +68,7 @@ for idx, cell in enumerate(nb["cells"], 1):
         if "m.save(" in src:
             try:
                 import base64 as _b64
-                img = pathlib.Path("/home/agent/napoli1980/map_by_model.png").read_bytes()
+                img = pathlib.Path(__file__).resolve().parent.parent / "map_by_model.png".read_bytes()
                 try:
                     from PIL import Image
                     import io as _io

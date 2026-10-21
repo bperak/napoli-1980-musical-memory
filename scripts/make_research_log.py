@@ -7,7 +7,7 @@ import pathlib
 from docx import Document
 from docx.shared import Pt, Cm, RGBColor
 
-BASE = pathlib.Path("/home/agent/napoli1980")
+BASE = pathlib.Path(__file__).resolve().parent.parent
 OUT = BASE / "seminar_federico" / "Research_log_Naples_1980_places.docx"
 NAVY = RGBColor(0x1F, 0x38, 0x64)
 GREY = RGBColor(0x55, 0x55, 0x55)

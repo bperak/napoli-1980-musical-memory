@@ -8,8 +8,11 @@ import random
 import folium
 from folium.plugins import MarkerCluster
 
-BASE = pathlib.Path("/home/agent/napoli1980")
-ROWS = list(csv.DictReader((BASE / "estrazioni_reali.csv").open(encoding="utf-8")))
+BASE = pathlib.Path(__file__).resolve().parent.parent
+DATA = BASE / "data" if (BASE / "data").is_dir() else BASE
+MAPS = BASE / "maps" if (BASE / "maps").is_dir() else BASE
+
+ROWS = list(csv.DictReader((DATA / "estrazioni_reali.csv").open(encoding="utf-8")))
 LOC = [r for r in ROWS if r["lat"] not in ("", None)]
 
 COLORS = {"club": "darkred", "discoteca": "purple", "negozio_dischi": "darkgreen",
@@ -50,7 +53,7 @@ title = (f"<div style='position:fixed;top:12px;left:52px;z-index:9999;background
          f"<span style='font-size:12px;color:#444'>{len(LOC)} localizzati su {len(ROWS)} estratti · "
          f"ogni punto porta la frase da cui è stato ricavato</span></div>")
 m.get_root().html.add_child(folium.Element(title))
-out = BASE / "estrazioni_reali_map.html"
+out = MAPS / "estrazioni_reali_map.html"
 m.save(str(out))
 print("HTML:", out, out.stat().st_size, "B | lokalizirano:", len(LOC), "| ukupno:", len(ROWS))
 
@@ -59,6 +62,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import contextily as cx
+# --- putanje: skripte rade i u repozitoriju (data/, maps/) i u ravnom radnom direktoriju ---
 
 fig, ax = plt.subplots(figsize=(9.5, 9))
 pal = {"club": "#8b1e1e", "discoteca": "#6c3483", "negozio_dischi": "#1e6b3a", "teatro": "#1f3864",
@@ -78,6 +82,6 @@ try:
 except Exception as e:
     print("podloga:", str(e)[:90])
 plt.tight_layout()
-png = BASE / "map_estrazioni_reali.png"
+png = MAPS / "map_estrazioni_reali.png"
 fig.savefig(png, dpi=150, bbox_inches="tight")
 print("PNG:", png, png.stat().st_size, "B")

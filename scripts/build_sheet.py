@@ -9,10 +9,9 @@ import re
 import sys
 import zipfile
 
-sys.path.insert(0, "/home/agent/.hermes/skills/productivity/google-workspace/scripts")
 from google_api import build_service
 
-BASE = pathlib.Path("/home/agent/napoli1980")
+BASE = pathlib.Path(__file__).resolve().parent.parent
 
 DOMANDE = [
     ("anno_nascita", "Indica il tuo anno di nascita"),

@@ -8,7 +8,7 @@ import pathlib
 import re
 import unicodedata
 
-BASE = pathlib.Path("/home/agent/napoli1980")
+BASE = pathlib.Path(__file__).resolve().parent.parent
 
 
 def norm(s):

@@ -8,10 +8,13 @@ import re
 import sys
 import time
 import urllib.request
+# --- putanje: skripte rade i u repozitoriju (data/, maps/) i u ravnom radnom direktoriju ---
+BASE = pathlib.Path(__file__).resolve().parent.parent
+DATA = BASE / "data" if (BASE / "data").is_dir() else BASE
+MAPS = BASE / "maps" if (BASE / "maps").is_dir() else BASE
 
-BASE = pathlib.Path("/home/agent/napoli1980")
 CORPUS = BASE / "corpus"
-OUT = BASE / "estrazioni_corpus.jsonl"
+OUT = DATA / "estrazioni_corpus.jsonl"
 
 PROMPT = """Sei un estrattore di dati storici. Dal TESTO estrai SOLO i luoghi musicali di Napoli nominati
 esplicitamente (negozi di dischi, club, discoteche, teatri, centri sociali, radio, piazze o muretti usati come

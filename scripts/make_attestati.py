@@ -5,7 +5,7 @@ import csv
 import json
 import pathlib
 
-BASE = pathlib.Path("/home/agent/napoli1980")
+BASE = pathlib.Path(__file__).resolve().parent.parent
 OUT = BASE / "attestati.csv"
 
 FIELDS = ["nome", "tipo", "luogo", "quartiere", "anni", "lat", "lon", "precisione_geo",

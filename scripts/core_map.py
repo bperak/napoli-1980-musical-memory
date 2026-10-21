@@ -15,7 +15,7 @@ import pandas as pd
 import contextily as cx
 
 warnings.filterwarnings("ignore")
-BASE = "/home/agent/napoli1980/"
+BASE = str(pathlib.Path(__file__).resolve().parent.parent) + "/"
 df = pd.read_csv(BASE + "napoli1980_places_enriched.csv")
 
 

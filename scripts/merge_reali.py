@@ -9,8 +9,11 @@ import re
 import time
 import urllib.parse
 import urllib.request
+# --- putanje: skripte rade i u repozitoriju (data/, maps/) i u ravnom radnom direktoriju ---
+BASE = pathlib.Path(__file__).resolve().parent.parent
+DATA = BASE / "data" if (BASE / "data").is_dir() else BASE
+MAPS = BASE / "maps" if (BASE / "maps").is_dir() else BASE
 
-BASE = pathlib.Path("/home/agent/napoli1980")
 UA = {"User-Agent": "Napoli1980Research/1.0 (research; contact: bperak@uniri.hr)"}
 
 DROP_RAW = ["discoteca omonima", "sala giochi", "vomero", "cavone san gennaro", "discoteca kiss kiss"]
@@ -35,7 +38,7 @@ def norm(n):
 
 def load():
     out = {}
-    for line in (BASE / "estrazioni_corpus.jsonl").read_text().splitlines():
+    for line in (DATA / "estrazioni_corpus.jsonl").read_text().splitlines():
         if not line.strip():
             continue
         r = json.loads(line)
@@ -131,7 +134,7 @@ def main():
         rows.append(d)
     fields = ["nome", "tipo", "via", "quartiere", "anni", "lat", "lon", "precisione", "livello",
               "citazione", "documenti", "geo_fonte", "url"]
-    with (BASE / "estrazioni_reali.csv").open("w", encoding="utf-8", newline="") as f:
+    with (DATA / "estrazioni_reali.csv").open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
         w.writeheader()
         for r in rows:
