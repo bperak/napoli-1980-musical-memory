@@ -1,0 +1,17 @@
+# credentials and local state
+.env
+.env.*
+*.key
+*.pem
+credentials*.json
+token*.json
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# artefacts that are rebuilt
+*.log
+gen.log
