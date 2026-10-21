@@ -1,0 +1,79 @@
+[
+  {
+    "documento": "Diamond Dogs - Madre Napoli",
+    "url": "https://www.madrenapoli.it/calendario/diamond-dogs",
+    "file_locale": "doc_00.md",
+    "uso": "estrazione luoghi",
+    "nota": "testo integrale NON incluso nel repo (diritti)"
+  },
+  {
+    "documento": "Diamond Dogs: la Napoli underground degli anni '80 nelle foto di Toty Ruggieri - Frizzifrizzi",
+    "url": "https://www.frizzifrizzi.it/2016/05/26/diamond-dogs/",
+    "file_locale": "doc_01.md",
+    "uso": "estrazione luoghi",
+    "nota": "testo integrale NON incluso nel repo (diritti)"
+  },
+  {
+    "documento": "Capobianco - Sasà Capobianco: The Doctor!",
+    "url": "https://www.salvatorecapobianco.it/the-way-we-were",
+    "file_locale": "doc_02.md",
+    "uso": "estrazione luoghi",
+    "nota": "testo integrale NON incluso nel repo (diritti)"
+  },
+  {
+    "documento": "Radio Kiss Kiss - Wikipedia",
+    "url": "https://it.wikipedia.org/wiki/Radio_Kiss_Kiss",
+    "file_locale": "doc_03.md",
+    "uso": "estrazione luoghi",
+    "nota": "testo integrale NON incluso nel repo (diritti)"
+  },
+  {
+    "documento": "Musica & Memoria / Testimonianza: Radio Kiss Kiss Napoli",
+    "url": "https://www.musicaememoria.com/testimonianza_radio_kiss_kiss.htm",
+    "file_locale": "doc_04.md",
+    "uso": "estrazione luoghi",
+    "nota": "testo integrale NON incluso nel repo (diritti)"
+  },
+  {
+    "documento": "La storia del TTC Club, il noto sodalizio vomerese, a cavallo degli anni settanta e ottanta | Il Vomero di Gennaro Capodanno",
+    "url": "https://gennarocapodanno.wordpress.com/2023/10/27/ttcclub/",
+    "file_locale": "doc_10.md",
+    "uso": "estrazione luoghi",
+    "nota": "testo integrale NON incluso nel repo (diritti)"
+  },
+  {
+    "documento": "Discoteche abbandonate in Campania: Archivi - DustyDancing",
+    "url": "https://www.dustydancing.com/category/discoteche-abbandonate-campania",
+    "file_locale": "doc_11.md",
+    "uso": "estrazione luoghi",
+    "nota": "testo integrale NON incluso nel repo (diritti)"
+  },
+  {
+    "documento": "InchiostrOnline",
+    "url": "https://www.unisob.na.it/inchiostro?idrt=2403",
+    "file_locale": "doc_20.md",
+    "uso": "estrazione luoghi",
+    "nota": "testo integrale NON incluso nel repo (diritti)"
+  },
+  {
+    "documento": "L'Indiependente — Spacca Napoli #3",
+    "url": "https://www.lindiependente.it/spacca-napoli-3-underground",
+    "file_locale": "ricerca/src_0.md",
+    "uso": "estrazione luoghi",
+    "nota": "testo integrale NON incluso nel repo (diritti)"
+  },
+  {
+    "documento": "D. Capasso, Ten Cities — estratto Rolling Stone",
+    "url": "https://www.rollingstone.it/musica/ten-cities-la-storia-del-clubbing-a-napoli/543958",
+    "file_locale": "ricerca/rs_napoli_80.md",
+    "uso": "estrazione luoghi",
+    "nota": "testo integrale NON incluso nel repo (diritti)"
+  },
+  {
+    "documento": "Il Mattino — Caffè della Luna aperto nel 1978",
+    "url": "https://www.ilmattino.it/napolismart/musica/",
+    "file_locale": "",
+    "uso": "verifica data",
+    "nota": "articolo non archiviato: usato solo come riscontro"
+  }
+]

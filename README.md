@@ -34,6 +34,7 @@ The rule of the repository is one line: **the model proposes, the citation prove
 
 Live versions:
 
+- **full interactive web application** (GIS map, probe analytics, live extractor & validator) — <https://bperak.github.io/napoli-1980-musical-memory/>
 - interactive map of the **extracted** places — <https://bperak.github.io/napoli-1980-map/reali.html>
 - interactive map of the **generated** places, 1,555 markers — <https://bperak.github.io/napoli-1980-map/>
 - notebook — <https://colab.research.google.com/drive/1OIh0W0HS9BAuD0rX8Oia5Jq4JuD9WpcK>
