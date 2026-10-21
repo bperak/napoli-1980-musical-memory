@@ -125,12 +125,15 @@ lead, not a datum. Full instructions, the column-by-column schema, the evidence 
 and three exercises a student can complete in an afternoon are in **[CONTRIBUTING.md](CONTRIBUTING.md)** — in
 English and in Italian.
 
-Every pull request is checked automatically: `scripts/check_data.py` verifies that no row lacks a quote or a source,
-that no name is duplicated, and that coordinates fall inside Naples. Run it yourself before pushing:
+Before proposing a change, run `scripts/check_data.py`: it verifies that no row lacks a quote or a source, that no
+name is duplicated, and that coordinates fall inside Naples.
 
 ```bash
 python scripts/check_data.py     # must print "0 errori"
 ```
+
+The same check is ready as a GitHub Action in `ci/validate.yml` — copy it to `.github/workflows/validate.yml` to have
+it run on every pull request (the push needs a token with the `workflow` scope).
 
 ## Citation
 

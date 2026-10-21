@@ -34,7 +34,7 @@ If you have write access — as a collaborator you do — you can edit the CSV o
 4. write a short commit message: `Add: Il Gabbiano, via Marechiaro, 1980s — source: ...`
 5. choose **Create a new branch and start a pull request**
 
-The check runs by itself on the pull request and tells you if a column is missing or a quote is empty.
+Run the check before you propose the change (see below); it tells you if a column is missing or a quote is empty.
 
 ### c) Work locally (for a batch of places)
 
@@ -161,13 +161,17 @@ precisely so that the two can be told apart.
 One review is enough for a row with a quote. Two are needed to change a level from C to B or to add level A. If
 nobody answers within a week, mention `@bperak` in the pull request — silence is a backlog, not a rejection.
 
-Everything in the repository is checked automatically on every pull request by
-[`scripts/check_data.py`](scripts/check_data.py): it verifies that columns exist, that no row lacks a quote or a
-source, that no name is duplicated, and that coordinates fall inside Naples. You can run it yourself before pushing:
+Before every pull request, run [`scripts/check_data.py`](scripts/check_data.py). It verifies that the columns exist,
+that no row lacks a quote or a source, that no name is duplicated, and that coordinates fall inside Naples, and it
+exits with an error if something is wrong:
 
 ```bash
-python scripts/check_data.py
+python scripts/check_data.py     # must print "0 errori"
 ```
+
+The same check can run automatically on every pull request: the workflow is ready in [`ci/validate.yml`](ci/validate.yml)
+and only needs to be copied to `.github/workflows/validate.yml` by someone whose GitHub token has the `workflow`
+scope.
 
 ---
 
