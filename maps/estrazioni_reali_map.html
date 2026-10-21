@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a337d5507dd556218c59727e6ff95ce3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    <div style='position:fixed;top:12px;left:52px;z-index:9999;background:rgba(255,255,255,.94);padding:10px 14px;border-radius:8px;font-family:system-ui,sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.15)'><b style='font-size:14px'>Napoli 1980 — luoghi estratti dai documenti</b><br><span style='font-size:12px;color:#444'>15 localizzati su 24 estratti · ogni punto porta la frase da cui è stato ricavato</span></div>
+    
+            <div class="folium-map" id="map_a337d5507dd556218c59727e6ff95ce3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a337d5507dd556218c59727e6ff95ce3 = L.map(
+                "map_a337d5507dd556218c59727e6ff95ce3",
+                {
+                    center: [40.8475, 14.25],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_a337d5507dd556218c59727e6ff95ce3);
+
+            
+
+        
+    
+            var tile_layer_f9d3f29c686547addc2efacb9eb6d3c8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f9d3f29c686547addc2efacb9eb6d3c8.addTo(map_a337d5507dd556218c59727e6ff95ce3);
+        
+    
+            var tile_layer_d9e53196c9f330e6bd4ad2c86052ade7 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 16,
+  "maxNativeZoom": 16,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Esri, DeLorme, NAVTEQ",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d9e53196c9f330e6bd4ad2c86052ade7.addTo(map_a337d5507dd556218c59727e6ff95ce3);
+        
+    
+            var feature_group_f29cc9d17ccb55abc19b90c36b3c743c = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_1c444c5aefdaa1f9a10604db91f2d50e = L.marker(
+                [40.86291, 14.24888],
+                {
+}
+            ).addTo(feature_group_f29cc9d17ccb55abc19b90c36b3c743c);
+        
+    
+            var icon_66e5a49eed14535fb36e33b9f5155d67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_161b5c957b204fb839ba123d492eed54 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_caf35b5568b79060e260b15933a22e61 = $(`<div id="html_caf35b5568b79060e260b15933a22e61" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Diamond Dogs</b><br><span style='color:#666'>club · Cavone San Gennaro · 1984-1987</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„varcato il portone di ferro arrugginito al Cavone San Gennaro, nel cuore del rione Sanità, si scendeva... nello storico locale underground Diamond Dogs”</i><br><span style='color:#888;font-size:11px'>Capasso, Ten Cities — estratto Rolling Stone | Diamond Dogs - Madre Napoli | Diamond Dogs: la Napoli underground degli anni '80 nelle foto di Toty  | L'Indiependente — Spacca Napoli #3</span><br><span style='color:#888;font-size:11px'>prova: B · via</span></div></div>`)[0];
+                popup_161b5c957b204fb839ba123d492eed54.setContent(html_caf35b5568b79060e260b15933a22e61);
+            
+        
+
+        marker_1c444c5aefdaa1f9a10604db91f2d50e.bindPopup(popup_161b5c957b204fb839ba123d492eed54)
+        ;
+
+        
+    
+    
+            marker_1c444c5aefdaa1f9a10604db91f2d50e.bindTooltip(
+                `<div>
+                     Diamond Dogs — club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1c444c5aefdaa1f9a10604db91f2d50e.setIcon(icon_66e5a49eed14535fb36e33b9f5155d67);
+            
+    
+            var marker_c60ea78551fe80f6f7ef012a5da74ffb = L.marker(
+                [40.8296, 14.24483],
+                {
+}
+            ).addTo(feature_group_f29cc9d17ccb55abc19b90c36b3c743c);
+        
+    
+            var icon_44977ce043186dbcb8b84a0246966c28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20dde36451b7867f3842c96458213583 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_4521217a57700cbf3978096eb3d85436 = $(`<div id="html_4521217a57700cbf3978096eb3d85436" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Saturday's Club</b><br><span style='color:#666'>club · Via Partenope · 1969</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„il Saturday's Club sito in Via Partenope a Napoli nel 1969”</i><br><span style='color:#888;font-size:11px'>Capobianco - Sasà Capobianco: The Doctor!</span><br><span style='color:#888;font-size:11px'>prova: C · via</span></div></div>`)[0];
+                popup_20dde36451b7867f3842c96458213583.setContent(html_4521217a57700cbf3978096eb3d85436);
+            
+        
+
+        marker_c60ea78551fe80f6f7ef012a5da74ffb.bindPopup(popup_20dde36451b7867f3842c96458213583)
+        ;
+
+        
+    
+    
+            marker_c60ea78551fe80f6f7ef012a5da74ffb.bindTooltip(
+                `<div>
+                     Saturday's Club — club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c60ea78551fe80f6f7ef012a5da74ffb.setIcon(icon_44977ce043186dbcb8b84a0246966c28);
+            
+    
+            var marker_bebc88ac3969f51e03bd35b5fcdbf5a8 = L.marker(
+                [40.81737, 14.20199],
+                {
+}
+            ).addTo(feature_group_f29cc9d17ccb55abc19b90c36b3c743c);
+        
+    
+            var icon_ee363dfcffd2b2a7eab62e19896e295a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74746ab2192941b89aa0210742260499 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_01167bacf84dc806e7bed4f509397594 = $(`<div id="html_01167bacf84dc806e7bed4f509397594" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Zeppelin</b><br><span style='color:#666'>club · Via Manzoni · —</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„Passa quindi allo Zeppelin, storico Night di Via Manzoni”</i><br><span style='color:#888;font-size:11px'>Capobianco - Sasà Capobianco: The Doctor!</span><br><span style='color:#888;font-size:11px'>prova: C · via</span></div></div>`)[0];
+                popup_74746ab2192941b89aa0210742260499.setContent(html_01167bacf84dc806e7bed4f509397594);
+            
+        
+
+        marker_bebc88ac3969f51e03bd35b5fcdbf5a8.bindPopup(popup_74746ab2192941b89aa0210742260499)
+        ;
+
+        
+    
+    
+            marker_bebc88ac3969f51e03bd35b5fcdbf5a8.bindTooltip(
+                `<div>
+                     Zeppelin — club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bebc88ac3969f51e03bd35b5fcdbf5a8.setIcon(icon_ee363dfcffd2b2a7eab62e19896e295a);
+            
+    
+            var marker_d8a923370d19804486c1cf63e70d94f2 = L.marker(
+                [40.83577, 14.24836],
+                {
+}
+            ).addTo(feature_group_f29cc9d17ccb55abc19b90c36b3c743c);
+        
+    
+            var icon_30b1253f33dbeea601e7511ec5c5b7e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4adfeb0d2e75c2c865546a85768b8147 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_855f6e70476211e2df26091835b3d9e3 = $(`<div id="html_855f6e70476211e2df26091835b3d9e3" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Tongue</b><br><span style='color:#666'>club · Napoli · —</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„il Tongue di Napoli”</i><br><span style='color:#888;font-size:11px'>Capobianco - Sasà Capobianco: The Doctor!</span><br><span style='color:#888;font-size:11px'>prova: C · quartiere</span></div></div>`)[0];
+                popup_4adfeb0d2e75c2c865546a85768b8147.setContent(html_855f6e70476211e2df26091835b3d9e3);
+            
+        
+
+        marker_d8a923370d19804486c1cf63e70d94f2.bindPopup(popup_4adfeb0d2e75c2c865546a85768b8147)
+        ;
+
+        
+    
+    
+            marker_d8a923370d19804486c1cf63e70d94f2.bindTooltip(
+                `<div>
+                     Tongue — club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d8a923370d19804486c1cf63e70d94f2.setIcon(icon_30b1253f33dbeea601e7511ec5c5b7e9);
+            
+    
+            var marker_3633595136106704028541bb323b8ce0 = L.marker(
+                [40.94709, 14.30775],
+                {
+}
+            ).addTo(feature_group_f29cc9d17ccb55abc19b90c36b3c743c);
+        
+    
+            var icon_93e1cb31d1721b8d602ad2fcfd494c15 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc47d137d0d4906092f2bbdc5fa21009 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_01445271934e8ed23b9dbf82da3f7e17 = $(`<div id="html_01445271934e8ed23b9dbf82da3f7e17" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>TTC Club</b><br><span style='color:#666'>club · via Paisiello · anni '70 e '80</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„i locali del mitico TTC, posti nel piano interrato al civico 39 di via Paisiello al Vomero”</i><br><span style='color:#888;font-size:11px'>La storia del TTC Club, il noto sodalizio vomerese, a cavallo degli an</span><br><span style='color:#888;font-size:11px'>prova: C · via</span></div></div>`)[0];
+                popup_cc47d137d0d4906092f2bbdc5fa21009.setContent(html_01445271934e8ed23b9dbf82da3f7e17);
+            
+        
+
+        marker_3633595136106704028541bb323b8ce0.bindPopup(popup_cc47d137d0d4906092f2bbdc5fa21009)
+        ;
+
+        
+    
+    
+            marker_3633595136106704028541bb323b8ce0.bindTooltip(
+                `<div>
+                     TTC Club — club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3633595136106704028541bb323b8ce0.setIcon(icon_93e1cb31d1721b8d602ad2fcfd494c15);
+            
+    
+            var marker_a12dc30d7468344e22a22905afa715be = L.marker(
+                [40.84383, 14.216],
+                {
+}
+            ).addTo(feature_group_f29cc9d17ccb55abc19b90c36b3c743c);
+        
+    
+            var icon_7e6081a86ee32652a85bc41108d11c80 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f81fbf58585e7fffc41e74461f83a1a = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_6d3630846fb86fbeb2cc5854c5e92eda = $(`<div id="html_6d3630846fb86fbeb2cc5854c5e92eda" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Trilogy</b><br><span style='color:#666'>club · Vomero · inizio anni '80</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„il Trilogy sulla collina del Vomero (dove troviamo in consolle Gigi D’Aria, il primo dj alternativo della scena)”</i><br><span style='color:#888;font-size:11px'>Capasso, Ten Cities — estratto Rolling Stone</span><br><span style='color:#888;font-size:11px'>prova: C · quartiere</span></div></div>`)[0];
+                popup_3f81fbf58585e7fffc41e74461f83a1a.setContent(html_6d3630846fb86fbeb2cc5854c5e92eda);
+            
+        
+
+        marker_a12dc30d7468344e22a22905afa715be.bindPopup(popup_3f81fbf58585e7fffc41e74461f83a1a)
+        ;
+
+        
+    
+    
+            marker_a12dc30d7468344e22a22905afa715be.bindTooltip(
+                `<div>
+                     Trilogy — club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a12dc30d7468344e22a22905afa715be.setIcon(icon_7e6081a86ee32652a85bc41108d11c80);
+            
+    
+            var marker_d7cdc7c43ab61e39bab523c9bbb73f4b = L.marker(
+                [40.87593, 14.50775],
+                {
+}
+            ).addTo(feature_group_f29cc9d17ccb55abc19b90c36b3c743c);
+        
+    
+            var icon_db57462368f1cf4a584ddc586536d196 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96416336c347b3e100a59ceadee9dcd2 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_0c5ad7cb0b89622c19de8d5285c57884 = $(`<div id="html_0c5ad7cb0b89622c19de8d5285c57884" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Pulsar</b><br><span style='color:#666'>club · via Costantinopoli · inizio anni '80</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„il Pulsar di via Costantinopoli”</i><br><span style='color:#888;font-size:11px'>Capasso, Ten Cities — estratto Rolling Stone</span><br><span style='color:#888;font-size:11px'>prova: C · via</span></div></div>`)[0];
+                popup_96416336c347b3e100a59ceadee9dcd2.setContent(html_0c5ad7cb0b89622c19de8d5285c57884);
+            
+        
+
+        marker_d7cdc7c43ab61e39bab523c9bbb73f4b.bindPopup(popup_96416336c347b3e100a59ceadee9dcd2)
+        ;
+
+        
+    
+    
+            marker_d7cdc7c43ab61e39bab523c9bbb73f4b.bindTooltip(
+                `<div>
+                     Pulsar — club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d7cdc7c43ab61e39bab523c9bbb73f4b.setIcon(icon_db57462368f1cf4a584ddc586536d196);
+            
+    
+            var marker_066c6e96f6296b67e3ad9e9d5de68519 = L.marker(
+                [40.8342, 14.22888],
+                {
+}
+            ).addTo(feature_group_f29cc9d17ccb55abc19b90c36b3c743c);
+        
+    
+            var icon_a2c8104b6dace1ed51b982cd45df3b65 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5edb23cf66a7effaf5ef13a2a6b22962 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_7aae68d15c8003aab7c5e49238926a6b = $(`<div id="html_7aae68d15c8003aab7c5e49238926a6b" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Caffè della luna</b><br><span style='color:#666'>club · Chiaia · inizio anni '80</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„il Caffè della luna nel quartiere di Chiaia”</i><br><span style='color:#888;font-size:11px'>Capasso, Ten Cities — estratto Rolling Stone</span><br><span style='color:#888;font-size:11px'>prova: C · quartiere</span></div></div>`)[0];
+                popup_5edb23cf66a7effaf5ef13a2a6b22962.setContent(html_7aae68d15c8003aab7c5e49238926a6b);
+            
+        
+
+        marker_066c6e96f6296b67e3ad9e9d5de68519.bindPopup(popup_5edb23cf66a7effaf5ef13a2a6b22962)
+        ;
+
+        
+    
+    
+            marker_066c6e96f6296b67e3ad9e9d5de68519.bindTooltip(
+                `<div>
+                     Caffè della luna — club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_066c6e96f6296b67e3ad9e9d5de68519.setIcon(icon_a2c8104b6dace1ed51b982cd45df3b65);
+            
+    
+            feature_group_f29cc9d17ccb55abc19b90c36b3c743c.addTo(map_a337d5507dd556218c59727e6ff95ce3);
+        
+    
+            var feature_group_3502783dc0d29f5a1ea20d2130ff4d55 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_6b4015917325d9cafaaaa258b6880fc4 = L.marker(
+                [40.86004, 14.22352],
+                {
+}
+            ).addTo(feature_group_3502783dc0d29f5a1ea20d2130ff4d55);
+        
+    
+            var icon_14ce6fa8ce4536b13ffbc2e48677d608 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d50a22d99bd40c94dff8ff69a9ce4cc = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_fb0fafd8334033b3ee0b169a9bc6086b = $(`<div id="html_fb0fafd8334033b3ee0b169a9bc6086b" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Kiss Kiss</b><br><span style='color:#666'>discoteca · Via San Giacomo dei Capri · 1973-1986</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„Nel 1973 diviene il Disk Jockey della prima maxidiscoteca napoletana il Kiss Kiss, nella sua prima sede in Via San Giacomo dei Capri”</i><br><span style='color:#888;font-size:11px'>Capasso, Ten Cities — estratto Rolling Stone | Capobianco - Sasà Capobianco: The Doctor! | Radio Kiss Kiss - Wikipedia</span><br><span style='color:#888;font-size:11px'>prova: B · via</span></div></div>`)[0];
+                popup_4d50a22d99bd40c94dff8ff69a9ce4cc.setContent(html_fb0fafd8334033b3ee0b169a9bc6086b);
+            
+        
+
+        marker_6b4015917325d9cafaaaa258b6880fc4.bindPopup(popup_4d50a22d99bd40c94dff8ff69a9ce4cc)
+        ;
+
+        
+    
+    
+            marker_6b4015917325d9cafaaaa258b6880fc4.bindTooltip(
+                `<div>
+                     Kiss Kiss — discoteca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b4015917325d9cafaaaa258b6880fc4.setIcon(icon_14ce6fa8ce4536b13ffbc2e48677d608);
+            
+    
+            feature_group_3502783dc0d29f5a1ea20d2130ff4d55.addTo(map_a337d5507dd556218c59727e6ff95ce3);
+        
+    
+            var feature_group_44f6391a9f3976338ed759420ce7f119 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_83ad7f0ec6acd774c598cf14b17ba8e5 = L.marker(
+                [40.84282, 14.21503],
+                {
+}
+            ).addTo(feature_group_44f6391a9f3976338ed759420ce7f119);
+        
+    
+            var icon_79369de9ebc1c76fee5ed476cbd89166 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "shopping-cart",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_81fefd894b0a6352b51e38f0d16fcf0e = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c5de997a4ab1d11877e95d29549c29d7 = $(`<div id="html_c5de997a4ab1d11877e95d29549c29d7" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>De Marco</b><br><span style='color:#666'>negozio_dischi · Vomero · —</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„De Marco, un negozio di dischi, al Vomero”</i><br><span style='color:#888;font-size:11px'>L'Indiependente — Spacca Napoli #3</span><br><span style='color:#888;font-size:11px'>prova: C · quartiere</span></div></div>`)[0];
+                popup_81fefd894b0a6352b51e38f0d16fcf0e.setContent(html_c5de997a4ab1d11877e95d29549c29d7);
+            
+        
+
+        marker_83ad7f0ec6acd774c598cf14b17ba8e5.bindPopup(popup_81fefd894b0a6352b51e38f0d16fcf0e)
+        ;
+
+        
+    
+    
+            marker_83ad7f0ec6acd774c598cf14b17ba8e5.bindTooltip(
+                `<div>
+                     De Marco — negozio_dischi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_83ad7f0ec6acd774c598cf14b17ba8e5.setIcon(icon_79369de9ebc1c76fee5ed476cbd89166);
+            
+    
+            feature_group_44f6391a9f3976338ed759420ce7f119.addTo(map_a337d5507dd556218c59727e6ff95ce3);
+        
+    
+            var feature_group_386bb6f7ea60b080a2613b00f61452bc = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_eac930f4a8b012f5d4210ceae8dd768d = L.marker(
+                [40.85741, 14.2232],
+                {
+}
+            ).addTo(feature_group_386bb6f7ea60b080a2613b00f61452bc);
+        
+    
+            var icon_2599937c1954fdc22de49fd9954decd9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "signal",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a77a76b312e69b825aa5d95e1f1c2410 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_53d9fadbabbffb16ad3c75a95e079dbd = $(`<div id="html_53d9fadbabbffb16ad3c75a95e079dbd" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Radio Kiss Kiss</b><br><span style='color:#666'>radio · Via San Giacomo dei Capri · 1976-1986</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„Sasà Capobianco nel 1976 crea la Radio che prende il nome dalla discoteca Kiss Kiss e ne diviene Direttore Artistico”</i><br><span style='color:#888;font-size:11px'>Capasso, Ten Cities — estratto Rolling Stone | Capobianco - Sasà Capobianco: The Doctor! | Musica & Memoria / Testimonianza: Radio Kiss Kiss Napoli | Radio Kiss Kiss - Wikipedia</span><br><span style='color:#888;font-size:11px'>prova: B · via</span></div></div>`)[0];
+                popup_a77a76b312e69b825aa5d95e1f1c2410.setContent(html_53d9fadbabbffb16ad3c75a95e079dbd);
+            
+        
+
+        marker_eac930f4a8b012f5d4210ceae8dd768d.bindPopup(popup_a77a76b312e69b825aa5d95e1f1c2410)
+        ;
+
+        
+    
+    
+            marker_eac930f4a8b012f5d4210ceae8dd768d.bindTooltip(
+                `<div>
+                     Radio Kiss Kiss — radio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eac930f4a8b012f5d4210ceae8dd768d.setIcon(icon_2599937c1954fdc22de49fd9954decd9);
+            
+    
+            feature_group_386bb6f7ea60b080a2613b00f61452bc.addTo(map_a337d5507dd556218c59727e6ff95ce3);
+        
+    
+            var feature_group_a03adadc1910198fa2cc0a5979dfb46c = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_393652ff0c5a7e05749d6d6f69f9dd57 = L.marker(
+                [40.84576, 14.25242],
+                {
+}
+            ).addTo(feature_group_a03adadc1910198fa2cc0a5979dfb46c);
+        
+    
+            var icon_36e263e8109fc1be172fd20df57b4e10 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "users",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_52134c38dd141cd5d52f4e4266aa5625 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_78680ed2280a0c0b5c9eca0707cd3f33 = $(`<div id="html_78680ed2280a0c0b5c9eca0707cd3f33" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Piazza del Gesù</b><br><span style='color:#666'>ritrovo · Piazza del Gesù · —</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„i primi ritrovi sono i muretti di Piazza del Gesù, Piazza dei Martiri e De Marco”</i><br><span style='color:#888;font-size:11px'>L'Indiependente — Spacca Napoli #3</span><br><span style='color:#888;font-size:11px'>prova: C · via</span></div></div>`)[0];
+                popup_52134c38dd141cd5d52f4e4266aa5625.setContent(html_78680ed2280a0c0b5c9eca0707cd3f33);
+            
+        
+
+        marker_393652ff0c5a7e05749d6d6f69f9dd57.bindPopup(popup_52134c38dd141cd5d52f4e4266aa5625)
+        ;
+
+        
+    
+    
+            marker_393652ff0c5a7e05749d6d6f69f9dd57.bindTooltip(
+                `<div>
+                     Piazza del Gesù — ritrovo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_393652ff0c5a7e05749d6d6f69f9dd57.setIcon(icon_36e263e8109fc1be172fd20df57b4e10);
+            
+    
+            var marker_184b531305f004d47ce2147ffb93681a = L.marker(
+                [40.83565, 14.24055],
+                {
+}
+            ).addTo(feature_group_a03adadc1910198fa2cc0a5979dfb46c);
+        
+    
+            var icon_d07398439fbfa1ec56f0ae4db287b5a9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "users",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de6ed64bb086f3c948f37332eaaf5d60 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_24136a37cb8b159e1cd7b3e04c9b2f87 = $(`<div id="html_24136a37cb8b159e1cd7b3e04c9b2f87" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Piazza dei Martiri</b><br><span style='color:#666'>ritrovo · Piazza dei Martiri · —</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„i primi ritrovi sono i muretti di Piazza del Gesù, Piazza dei Martiri e De Marco”</i><br><span style='color:#888;font-size:11px'>L'Indiependente — Spacca Napoli #3</span><br><span style='color:#888;font-size:11px'>prova: C · via</span></div></div>`)[0];
+                popup_de6ed64bb086f3c948f37332eaaf5d60.setContent(html_24136a37cb8b159e1cd7b3e04c9b2f87);
+            
+        
+
+        marker_184b531305f004d47ce2147ffb93681a.bindPopup(popup_de6ed64bb086f3c948f37332eaaf5d60)
+        ;
+
+        
+    
+    
+            marker_184b531305f004d47ce2147ffb93681a.bindTooltip(
+                `<div>
+                     Piazza dei Martiri — ritrovo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_184b531305f004d47ce2147ffb93681a.setIcon(icon_d07398439fbfa1ec56f0ae4db287b5a9);
+            
+    
+            var marker_aceebcf4b8052088cc1008a8667e9287 = L.marker(
+                [40.84334, 14.21607],
+                {
+}
+            ).addTo(feature_group_a03adadc1910198fa2cc0a5979dfb46c);
+        
+    
+            var icon_3584a04e0a19c8e40f9bd261367242f3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "users",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bcce1abeb7a80ac8264179df2bbcc36c = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_c3690c6ca8cacb2e499d3be516846293 = $(`<div id="html_c3690c6ca8cacb2e499d3be516846293" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Cantina Sica</b><br><span style='color:#666'>ritrovo · Vomero · —</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„al Vomero, quartiere in cui si trova anche un altro ritrovo, che seppur piccolo è molto frequentato e si chiama Cantina Sica”</i><br><span style='color:#888;font-size:11px'>L'Indiependente — Spacca Napoli #3</span><br><span style='color:#888;font-size:11px'>prova: C · quartiere</span></div></div>`)[0];
+                popup_bcce1abeb7a80ac8264179df2bbcc36c.setContent(html_c3690c6ca8cacb2e499d3be516846293);
+            
+        
+
+        marker_aceebcf4b8052088cc1008a8667e9287.bindPopup(popup_bcce1abeb7a80ac8264179df2bbcc36c)
+        ;
+
+        
+    
+    
+            marker_aceebcf4b8052088cc1008a8667e9287.bindTooltip(
+                `<div>
+                     Cantina Sica — ritrovo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aceebcf4b8052088cc1008a8667e9287.setIcon(icon_3584a04e0a19c8e40f9bd261367242f3);
+            
+    
+            var marker_0516d343f7cada6889f737b626129949 = L.marker(
+                [40.81479, 14.18435],
+                {
+}
+            ).addTo(feature_group_a03adadc1910198fa2cc0a5979dfb46c);
+        
+    
+            var icon_a03b694d8525a2996c1fc8c132ac6cbb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "users",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e28f59e163992740b24ecc1764bf3a7 = L.popup({
+  "maxWidth": 340,
+});
+
+        
+            
+                var html_f72ba5509c3aa3e6536c7d94896d290e = $(`<div id="html_f72ba5509c3aa3e6536c7d94896d290e" style="width: 100.0%; height: 100.0%;"><div style='font-family:system-ui,sans-serif;font-size:12px;max-width:320px'><b style='font-size:14px'>Cavalleggeri</b><br><span style='color:#666'>ritrovo · Cavalleggeri · —</span><br><hr style='border:none;border-top:1px solid #ddd;margin:6px 0'><i>„quelli di Cavalleggeri, che sono un po’ più fashion alla Clash”</i><br><span style='color:#888;font-size:11px'>L'Indiependente — Spacca Napoli #3</span><br><span style='color:#888;font-size:11px'>prova: C · quartiere</span></div></div>`)[0];
+                popup_4e28f59e163992740b24ecc1764bf3a7.setContent(html_f72ba5509c3aa3e6536c7d94896d290e);
+            
+        
+
+        marker_0516d343f7cada6889f737b626129949.bindPopup(popup_4e28f59e163992740b24ecc1764bf3a7)
+        ;
+
+        
+    
+    
+            marker_0516d343f7cada6889f737b626129949.bindTooltip(
+                `<div>
+                     Cavalleggeri — ritrovo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0516d343f7cada6889f737b626129949.setIcon(icon_a03b694d8525a2996c1fc8c132ac6cbb);
+            
+    
+            feature_group_a03adadc1910198fa2cc0a5979dfb46c.addTo(map_a337d5507dd556218c59727e6ff95ce3);
+        
+    
+            var layer_control_a860c2e765ba8a1d9cde9e848c359837_layers = {
+                base_layers : {
+                    "Strade" : tile_layer_f9d3f29c686547addc2efacb9eb6d3c8,
+                    "Chiaro (Esri)" : tile_layer_d9e53196c9f330e6bd4ad2c86052ade7,
+                },
+                overlays :  {
+                    "club (8)" : feature_group_f29cc9d17ccb55abc19b90c36b3c743c,
+                    "discoteca (1)" : feature_group_3502783dc0d29f5a1ea20d2130ff4d55,
+                    "negozio_dischi (1)" : feature_group_44f6391a9f3976338ed759420ce7f119,
+                    "radio (1)" : feature_group_386bb6f7ea60b080a2613b00f61452bc,
+                    "ritrovo (4)" : feature_group_a03adadc1910198fa2cc0a5979dfb46c,
+                },
+            };
+            let layer_control_a860c2e765ba8a1d9cde9e848c359837 = L.control.layers(
+                layer_control_a860c2e765ba8a1d9cde9e848c359837_layers.base_layers,
+                layer_control_a860c2e765ba8a1d9cde9e848c359837_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_a337d5507dd556218c59727e6ff95ce3);
+
+        
+</script>
+</html>
