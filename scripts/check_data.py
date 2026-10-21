@@ -34,8 +34,8 @@ REQUIRED = {
 
 # la tabella della mappa pretende la citazione; il registro storico degli attestati nasce
 # da fonti già citate nel foglio «fonti», quindi lì la citazione è raccomandata, non obbligatoria
-CITAZIONE_OBBLIGATORIA = {"estrazioni_reali.csv"}
-TIPO_CONTROLLATO = {"estrazioni_reali.csv"}
+# l'unico file con schema proprio è il registro storico degli attestati; tutto il resto deve citare
+SCHEMA_LIBERO = {"attestati.csv"}
 
 
 def norm(s: str) -> str:
@@ -77,7 +77,7 @@ def check_file(path: Path) -> tuple[list[str], list[str], int]:
 
         cit = (row.get("citazione") or "").strip()
         fonte = (row.get("documenti") or row.get("fonte") or "").strip()
-        if path.name in CITAZIONE_OBBLIGATORIA and len(cit) < 15:
+        if path.name not in SCHEMA_LIBERO and len(cit) < 15:
             errors.append(f"{path.name}:{i}: «{nome}» senza citazione (minimo 15 caratteri)")
         elif cit and len(cit) < 15:
             warnings.append(f"{path.name}:{i}: «{nome}» citazione troppo breve")
@@ -91,7 +91,7 @@ def check_file(path: Path) -> tuple[list[str], list[str], int]:
             warnings.append(f"{path.name}:{i}: «{nome}» è livello D — può stare nella tabella, non sulla mappa")
 
         tipo = (row.get("tipo") or "").strip().lower()
-        if path.name in TIPO_CONTROLLATO and tipo and tipo not in TIPI:
+        if path.name not in SCHEMA_LIBERO and tipo and tipo not in TIPI:
             warnings.append(f"{path.name}:{i}: tipo «{tipo}» fuori elenco ({', '.join(sorted(TIPI))})")
 
         lat, lon = (row.get("lat") or "").strip(), (row.get("lon") or "").strip()
