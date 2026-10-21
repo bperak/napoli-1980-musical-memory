@@ -110,6 +110,28 @@ remember a city, and to generate hypotheses for the archive.
 Quotations from published articles are short and used for verification. Full texts are not redistributed; the
 manifest gives the URL of each one. Photographs and archival material remain with their rights holders.
 
+## Contributing — for collaborators and students
+
+The table is open. Three ways in, and the easiest needs no git at all:
+
+1. **Open an issue** with the «Add a place» form — two minutes, an account, no coding:
+   <https://github.com/bperak/napoli-1980-musical-memory/issues/new?template=add-place.yml>
+2. **Edit `data/estrazioni_reali.csv` in the browser** (pencil icon → new branch → pull request) if you have write
+   access.
+3. **Work locally** and open a pull request from a topic branch.
+
+The rule is one sentence: **no row without a citation, no citation without a source.** A model's suggestion is a
+lead, not a datum. Full instructions, the column-by-column schema, the evidence levels, where to find the sources,
+and three exercises a student can complete in an afternoon are in **[CONTRIBUTING.md](CONTRIBUTING.md)** — in
+English and in Italian.
+
+Every pull request is checked automatically: `scripts/check_data.py` verifies that no row lacks a quote or a source,
+that no name is duplicated, and that coordinates fall inside Naples. Run it yourself before pushing:
+
+```bash
+python scripts/check_data.py     # must print "0 errori"
+```
+
 ## Citation
 
 ```

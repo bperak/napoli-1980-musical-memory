@@ -1,0 +1,103 @@
+name: Add a place
+description: Propose a place (club, record shop, theatre, radio, meeting point) with its source
+title: "[place] "
+labels: ["data", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **The rule: no row without a citation.** Copy the exact sentence from your source — do not paraphrase it.
+        If you only remember the place and have no document, say so in the last field: it will be kept as a lead,
+        not as a datum.
+
+  - type: input
+    id: nome
+    attributes:
+      label: Name of the place
+      description: As the source writes it, not as you remember it
+      placeholder: Diamond Dogs
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Type
+      options:
+        - club
+        - discoteca
+        - negozio_dischi
+        - teatro
+        - centro_sociale
+        - radio
+        - ritrovo
+        - altro
+    validations:
+      required: true
+
+  - type: input
+    id: via
+    attributes:
+      label: Street or quarter
+      description: Leave empty rather than guess — an empty field is honest, an invented street is not
+      placeholder: Cavone San Gennaro, Sanità
+
+  - type: input
+    id: anni
+    attributes:
+      label: Years
+      description: As named in the source
+      placeholder: 1984-1987
+
+  - type: textarea
+    id: citazione
+    attributes:
+      label: The exact sentence
+      description: Copied from the source, max ~30 words, in the original language
+      placeholder: l'11 giugno 1984 aprono il Diamond Dogs
+    validations:
+      required: true
+
+  - type: input
+    id: fonte
+    attributes:
+      label: Source
+      description: Publication, article, archive, page and date of consultation
+      placeholder: Capasso, Ten Cities (Rolling Stone Italia), consultato il 21.10.2026
+    validations:
+      required: true
+
+  - type: dropdown
+    id: livello
+    attributes:
+      label: Evidence level
+      options:
+        - "C — one source"
+        - "B — two independent sources"
+        - "A — period document with an address"
+        - "D — model only, keep as a lead"
+    validations:
+      required: true
+
+  - type: input
+    id: coordinate
+    attributes:
+      label: Coordinates (optional)
+      description: Latitude, longitude of the street or the quarter centre
+      placeholder: "40.8576, 14.2520"
+
+  - type: textarea
+    id: note
+    attributes:
+      label: Anything else
+      description: Doubts, contradictions between sources, what still needs checking
+
+  - type: checkboxes
+    id: conferma
+    attributes:
+      label: Confirmation
+      options:
+        - label: I copied the sentence from the source, I did not paraphrase it
+          required: true
+        - label: The place is in Naples or its first belt (Acerra, Portici, Pozzuoli...)
+          required: true
