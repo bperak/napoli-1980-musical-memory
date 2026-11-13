@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e11afd552ac6a009dbbb4ded527bde7f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e11afd552ac6a009dbbb4ded527bde7f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e11afd552ac6a009dbbb4ded527bde7f = L.map(
+                "map_e11afd552ac6a009dbbb4ded527bde7f",
+                {
+                    center: [40.8518, 14.2681],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a506d516aa94bcaa8b2a4d54109441ed = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a506d516aa94bcaa8b2a4d54109441ed.addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var marker_d85e1828d0b15b9d5bb60acaa41e2eba = L.marker(
+                [40.845, 14.25],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_045dfdecd2c4e02977e570884e2c64cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e53fda70fc4155f7a4a60ef78b1e99d2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cab5fc91350188f40f7de7581df0fa1e = $(`<div id="html_cab5fc91350188f40f7de7581df0fa1e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Alchemy</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Napoli</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "l’Alchemy, il Porky’s e tanti altri..."         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Informazioni storiche non disponibili.         </p>     </div>     </div>`)[0];
+                popup_e53fda70fc4155f7a4a60ef78b1e99d2.setContent(html_cab5fc91350188f40f7de7581df0fa1e);
+            
+        
+
+        marker_d85e1828d0b15b9d5bb60acaa41e2eba.bindPopup(popup_e53fda70fc4155f7a4a60ef78b1e99d2)
+        ;
+
+        
+    
+    
+                marker_d85e1828d0b15b9d5bb60acaa41e2eba.setIcon(icon_045dfdecd2c4e02977e570884e2c64cf);
+            
+    
+            var marker_38c05bd58e6e94f012f03302d5d99792 = L.marker(
+                [40.8354, 14.2389],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_01934ac2836378b6bcaada5568ab5721 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb34f31ae6e66dc5ba9e6e766a54f8ba = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1ccb0c3f280ccacf0f091b13c3d7c9d9 = $(`<div id="html_1ccb0c3f280ccacf0f091b13c3d7c9d9" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Bebop</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Chiaia</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "Si faceva e ascoltava musica nel triangolo di fuoco cittadino: oltre al "Sansenilla Bar" c'era il "Bebop" in via Ferrigni"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Storico club nei baretti di Chiaia dove si formò la scena alternative.         </p>     </div>     </div>`)[0];
+                popup_bb34f31ae6e66dc5ba9e6e766a54f8ba.setContent(html_1ccb0c3f280ccacf0f091b13c3d7c9d9);
+            
+        
+
+        marker_38c05bd58e6e94f012f03302d5d99792.bindPopup(popup_bb34f31ae6e66dc5ba9e6e766a54f8ba)
+        ;
+
+        
+    
+    
+                marker_38c05bd58e6e94f012f03302d5d99792.setIcon(icon_01934ac2836378b6bcaada5568ab5721);
+            
+    
+            var marker_c5103ac7e574aa1d45bc39a4106a0dac = L.marker(
+                [40.957, 13.992],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_710f643d88c9c0dd05099888cb42b384 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3c27f51cbe51d3a66ecd8fb8b4e34ad6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99ad23083409abb504085dafb79744e5 = $(`<div id="html_99ad23083409abb504085dafb79744e5" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Bolidò</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Castel Volturno</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "la Mela di Villaggio Coppola ed il Bolidò"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Polo del divertimento notturno sul litorale domizio.         </p>     </div>     </div>`)[0];
+                popup_3c27f51cbe51d3a66ecd8fb8b4e34ad6.setContent(html_99ad23083409abb504085dafb79744e5);
+            
+        
+
+        marker_c5103ac7e574aa1d45bc39a4106a0dac.bindPopup(popup_3c27f51cbe51d3a66ecd8fb8b4e34ad6)
+        ;
+
+        
+    
+    
+                marker_c5103ac7e574aa1d45bc39a4106a0dac.setIcon(icon_710f643d88c9c0dd05099888cb42b384);
+            
+    
+            var marker_97c4674b66997cdf29cf391b8fd2b48b = L.marker(
+                [40.8373, 14.2382],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_8c25eedc544c7ce4840ea3bfc0ad9b96 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_357e9ae0cfd00f0e5e3e49d59a31d08a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_be30ba0c746b151f46a5599cce98f579 = $(`<div id="html_be30ba0c746b151f46a5599cce98f579" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Chez Moi</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Chiaia</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "Sasà con Filippo Arienzo allo Chez Moi"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Informazioni storiche non disponibili.         </p>     </div>     </div>`)[0];
+                popup_357e9ae0cfd00f0e5e3e49d59a31d08a.setContent(html_be30ba0c746b151f46a5599cce98f579);
+            
+        
+
+        marker_97c4674b66997cdf29cf391b8fd2b48b.bindPopup(popup_357e9ae0cfd00f0e5e3e49d59a31d08a)
+        ;
+
+        
+    
+    
+                marker_97c4674b66997cdf29cf391b8fd2b48b.setIcon(icon_8c25eedc544c7ce4840ea3bfc0ad9b96);
+            
+    
+            var marker_fe438e5b4ca98134a4a2f5578fe8ec60 = L.marker(
+                [40.8465, 14.2464],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_81075825b3302da99c41c249abb99d43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16ae030aeba97f583817546871b7ecca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_39c5693569498e7d365806dac727f188 = $(`<div id="html_39c5693569498e7d365806dac727f188" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">DAMM</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CENTRO SOCIALE         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Montesanto</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "Nel 1995 agli spazi occupati si aggiunge anche il DAMM, acronimo che sta per Diego Armando Maradona e l’ultima emme per Montesanto"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Centro nevralgico della controcultura e dei movimenti giovanili.         </p>     </div>     </div>`)[0];
+                popup_16ae030aeba97f583817546871b7ecca.setContent(html_39c5693569498e7d365806dac727f188);
+            
+        
+
+        marker_fe438e5b4ca98134a4a2f5578fe8ec60.bindPopup(popup_16ae030aeba97f583817546871b7ecca)
+        ;
+
+        
+    
+    
+                marker_fe438e5b4ca98134a4a2f5578fe8ec60.setIcon(icon_81075825b3302da99c41c249abb99d43);
+            
+    
+            var marker_d89f343b1d30b3e0a2802296a0a7f704 = L.marker(
+                [40.7485, 14.4988],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_2b0a41ccc679545ca1e88d6585282d7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d38d6434753590c879d0d798228a3272 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_94d5ac8916855dfef45357db3b7f4e4f = $(`<div id="html_94d5ac8916855dfef45357db3b7f4e4f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Empire</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Pompei</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "l'Empire a Pompei"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Informazioni storiche non disponibili.         </p>     </div>     </div>`)[0];
+                popup_d38d6434753590c879d0d798228a3272.setContent(html_94d5ac8916855dfef45357db3b7f4e4f);
+            
+        
+
+        marker_d89f343b1d30b3e0a2802296a0a7f704.bindPopup(popup_d38d6434753590c879d0d798228a3272)
+        ;
+
+        
+    
+    
+                marker_d89f343b1d30b3e0a2802296a0a7f704.setIcon(icon_2b0a41ccc679545ca1e88d6585282d7f);
+            
+    
+            var marker_2025a275013eca9c37bb920f03067185 = L.marker(
+                [40.648, 14.701],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_bb229699b36ec501a8c24c4f723d5798 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75908d94be9e5dabcc60f7435ebcec39 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a52eab665b5a1ca1145b0d89a1d1899f = $(`<div id="html_a52eab665b5a1ca1145b0d89a1d1899f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Fuenti</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Costiera Amalfitana</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "il Fuenti sulla Costiera Amalfitana"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Storica e discussa struttura sulla costiera.         </p>     </div>     </div>`)[0];
+                popup_75908d94be9e5dabcc60f7435ebcec39.setContent(html_a52eab665b5a1ca1145b0d89a1d1899f);
+            
+        
+
+        marker_2025a275013eca9c37bb920f03067185.bindPopup(popup_75908d94be9e5dabcc60f7435ebcec39)
+        ;
+
+        
+    
+    
+                marker_2025a275013eca9c37bb920f03067185.setIcon(icon_bb229699b36ec501a8c24c4f723d5798);
+            
+    
+            var marker_246af2923db48fb876cf6e92734ceb78 = L.marker(
+                [40.8383, 14.2496],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_77a9b73041842176b0513029bd56daa7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24b299b563ed063bceb82a980583013f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4cc87d8234b4bae468df6f7ea494e60a = $(`<div id="html_4cc87d8234b4bae468df6f7ea494e60a" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Galleria Umberto</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             ALTRO         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Centro</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "nel lontano 1976 si trova ad assistere a un concerto dei Napoli Centrale alla Galleria Umberto"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Spazio di aggregazione urbana informale per i giovani.         </p>     </div>     </div>`)[0];
+                popup_24b299b563ed063bceb82a980583013f.setContent(html_4cc87d8234b4bae468df6f7ea494e60a);
+            
+        
+
+        marker_246af2923db48fb876cf6e92734ceb78.bindPopup(popup_24b299b563ed063bceb82a980583013f)
+        ;
+
+        
+    
+    
+                marker_246af2923db48fb876cf6e92734ceb78.setIcon(icon_77a9b73041842176b0513029bd56daa7);
+            
+    
+            var marker_f26664103c2f5fb15d057ace75a3e484 = L.marker(
+                [40.6263, 14.3758],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_4f98862068bda7f4ae7730bdb1af4141 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe1e3d54889fff1916c6686caf4a4820 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36b81f783580f491da9edfc7d25b0f8e = $(`<div id="html_36b81f783580f491da9edfc7d25b0f8e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Gilda</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Sorrento</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "la Mela ed il Gilda a Sorrento"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Punto di riferimento per la movida della costiera.         </p>     </div>     </div>`)[0];
+                popup_fe1e3d54889fff1916c6686caf4a4820.setContent(html_36b81f783580f491da9edfc7d25b0f8e);
+            
+        
+
+        marker_f26664103c2f5fb15d057ace75a3e484.bindPopup(popup_fe1e3d54889fff1916c6686caf4a4820)
+        ;
+
+        
+    
+    
+                marker_f26664103c2f5fb15d057ace75a3e484.setIcon(icon_4f98862068bda7f4ae7730bdb1af4141);
+            
+    
+            var marker_f148d4218143d382cf0639626e400702 = L.marker(
+                [40.84, 14.25],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_25657f79eb252d478323982e368985e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2ecd6c6b4a04bbafc837e12116686a82 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ccd8c3b062e5174fcb3227b72f7ac936 = $(`<div id="html_ccd8c3b062e5174fcb3227b72f7ac936" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">KGB</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Napoli</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "lo ZX, il KGB, il Rockery Nook"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Informazioni storiche non disponibili.         </p>     </div>     </div>`)[0];
+                popup_2ecd6c6b4a04bbafc837e12116686a82.setContent(html_ccd8c3b062e5174fcb3227b72f7ac936);
+            
+        
+
+        marker_f148d4218143d382cf0639626e400702.bindPopup(popup_2ecd6c6b4a04bbafc837e12116686a82)
+        ;
+
+        
+    
+    
+                marker_f148d4218143d382cf0639626e400702.setIcon(icon_25657f79eb252d478323982e368985e5);
+            
+    
+            var marker_4b5771638988e36bc173bc93ef5ef4a9 = L.marker(
+                [40.6775, 14.766],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_523ef4c9ff1154ab30820dafe60742f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1f28f8b97334673fb2bfe16fa7c3fe84 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_43e32648f874511e11ba31aa27a7895e = $(`<div id="html_43e32648f874511e11ba31aa27a7895e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Manila</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Salerno</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "il Manila ed il Meeting a Salerno"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Informazioni storiche non disponibili.         </p>     </div>     </div>`)[0];
+                popup_1f28f8b97334673fb2bfe16fa7c3fe84.setContent(html_43e32648f874511e11ba31aa27a7895e);
+            
+        
+
+        marker_4b5771638988e36bc173bc93ef5ef4a9.bindPopup(popup_1f28f8b97334673fb2bfe16fa7c3fe84)
+        ;
+
+        
+    
+    
+                marker_4b5771638988e36bc173bc93ef5ef4a9.setIcon(icon_523ef4c9ff1154ab30820dafe60742f9);
+            
+    
+            var marker_eb347b9d38f826a1738dc582be7c07e1 = L.marker(
+                [40.677, 14.765],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_cf1deaf56bd00685abdd8bbe78a4227d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d8e43781d084b7f889fce982d99d4d9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_734c409da21a2543d97fced241fef4c0 = $(`<div id="html_734c409da21a2543d97fced241fef4c0" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Meeting</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Salerno</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "il Manila ed il Meeting a Salerno"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Informazioni storiche non disponibili.         </p>     </div>     </div>`)[0];
+                popup_5d8e43781d084b7f889fce982d99d4d9.setContent(html_734c409da21a2543d97fced241fef4c0);
+            
+        
+
+        marker_eb347b9d38f826a1738dc582be7c07e1.bindPopup(popup_5d8e43781d084b7f889fce982d99d4d9)
+        ;
+
+        
+    
+    
+                marker_eb347b9d38f826a1738dc582be7c07e1.setIcon(icon_cf1deaf56bd00685abdd8bbe78a4227d);
+            
+    
+            var marker_97c931087463ef845ceecc2233495aae = L.marker(
+                [40.8361, 14.2385],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_7ab87f3943011a9f36a48fef06681c04 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94fd7e25ee45c6edfefce91a9b268117 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ed9c071e18f7440d43bcf32a9eab24f1 = $(`<div id="html_ed9c071e18f7440d43bcf32a9eab24f1" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">la Mela</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Chiaia</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "Tra questi locali ricordiamo: la Mela ed il Gilda a Sorrento"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Storico locale notturno di Via dei Mille.         </p>     </div>     </div>`)[0];
+                popup_94fd7e25ee45c6edfefce91a9b268117.setContent(html_ed9c071e18f7440d43bcf32a9eab24f1);
+            
+        
+
+        marker_97c931087463ef845ceecc2233495aae.bindPopup(popup_94fd7e25ee45c6edfefce91a9b268117)
+        ;
+
+        
+    
+    
+                marker_97c931087463ef845ceecc2233495aae.setIcon(icon_7ab87f3943011a9f36a48fef06681c04);
+            
+    
+            var marker_57d7d382c4ae9c392a48f99c5e3ad368 = L.marker(
+                [40.8497, 14.2505],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_11d97685157da84e30b36cd54fe59875 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f97d3e6148dd3468255bf6de7bcfc6a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2d3114a5b8d27f2f4db5551117a39747 = $(`<div id="html_2d3114a5b8d27f2f4db5551117a39747" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Notting Hill</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Centro</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "Il Nothing Hill nei pressi di Piazza Dante ospiterà spesso gli Almamegretta"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Uno dei locali underground storici di Napoli.         </p>     </div>     </div>`)[0];
+                popup_6f97d3e6148dd3468255bf6de7bcfc6a.setContent(html_2d3114a5b8d27f2f4db5551117a39747);
+            
+        
+
+        marker_57d7d382c4ae9c392a48f99c5e3ad368.bindPopup(popup_6f97d3e6148dd3468255bf6de7bcfc6a)
+        ;
+
+        
+    
+    
+                marker_57d7d382c4ae9c392a48f99c5e3ad368.setIcon(icon_11d97685157da84e30b36cd54fe59875);
+            
+    
+            var marker_7a8303123a384a5a8b8fdb904922ff18 = L.marker(
+                [40.8475, 14.2831],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_c166efb8b068b9f2800500781a283529 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_492e30c424879e7b207aea549c97a126 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1bea1b1433e3427340e911fe391d6e86 = $(`<div id="html_1bea1b1433e3427340e911fe391d6e86" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Officina 99</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CENTRO SOCIALE         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Gianturco</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "Il 1º maggio 1991 un gruppo di studenti e militanti occupa l’ex scuola “Stefano Falco” in via Emanuele Gianturco 99"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Luogo fondamentale per la nascita del rap partenopeo (99 Posse).         </p>     </div>     </div>`)[0];
+                popup_492e30c424879e7b207aea549c97a126.setContent(html_1bea1b1433e3427340e911fe391d6e86);
+            
+        
+
+        marker_7a8303123a384a5a8b8fdb904922ff18.bindPopup(popup_492e30c424879e7b207aea549c97a126)
+        ;
+
+        
+    
+    
+                marker_7a8303123a384a5a8b8fdb904922ff18.setIcon(icon_c166efb8b068b9f2800500781a283529);
+            
+    
+            var marker_363dc811df473a2ae8cb4f50cf65c3ca = L.marker(
+                [40.8248, 14.1852],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_b5b3b4e718ab984a0e79509e3d504ddf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_031cca234de523870a55c80d409d92f9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c131735ba2de908bbdc3fff182bc8c0a = $(`<div id="html_c131735ba2de908bbdc3fff182bc8c0a" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Palapartenope</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             TEATRO         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Fuorigrotta</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "hanno trasformato il concerto del Palapartenope del 5 giugno 1991 in un autentico cult"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Il tempio dei grandi concerti di Napoli.         </p>     </div>     </div>`)[0];
+                popup_031cca234de523870a55c80d409d92f9.setContent(html_c131735ba2de908bbdc3fff182bc8c0a);
+            
+        
+
+        marker_363dc811df473a2ae8cb4f50cf65c3ca.bindPopup(popup_031cca234de523870a55c80d409d92f9)
+        ;
+
+        
+    
+    
+                marker_363dc811df473a2ae8cb4f50cf65c3ca.setIcon(icon_b5b3b4e718ab984a0e79509e3d504ddf);
+            
+    
+            var marker_4b8fa65a2602a2e787834fd3bb31f07a = L.marker(
+                [40.817, 14.205],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_f2bdab36b9fcc181a2ccd8b00fba8a43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_26af12faf902d0f60b915fec5e561120 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_00ecfcb6bde6090aa0fc8ff13069fa51 = $(`<div id="html_00ecfcb6bde6090aa0fc8ff13069fa51" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Piccadilly</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Posillipo</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "Per gli amanti del soul e del folk sofisticato c'era anche il night club "Piccadilly", in via Petrarca."         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Elegante locale situato sulla collina di Posillipo.         </p>     </div>     </div>`)[0];
+                popup_26af12faf902d0f60b915fec5e561120.setContent(html_00ecfcb6bde6090aa0fc8ff13069fa51);
+            
+        
+
+        marker_4b8fa65a2602a2e787834fd3bb31f07a.bindPopup(popup_26af12faf902d0f60b915fec5e561120)
+        ;
+
+        
+    
+    
+                marker_4b8fa65a2602a2e787834fd3bb31f07a.setIcon(icon_f2bdab36b9fcc181a2ccd8b00fba8a43);
+            
+    
+            var marker_489c43d3becf3d991091ff2e8566aa46 = L.marker(
+                [40.738, 13.945],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_a4c26e5d2d4369fcbea692925fea3832 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c4347dbb9b622bac5b2d790128a5ebbf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d15d1259d9df0a302e65ae018144493 = $(`<div id="html_5d15d1259d9df0a302e65ae018144493" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Pink Panther</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Ischia</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "il Pink Panther a Ischia"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Celebre locale notturno sull'isola d'Ischia.         </p>     </div>     </div>`)[0];
+                popup_c4347dbb9b622bac5b2d790128a5ebbf.setContent(html_5d15d1259d9df0a302e65ae018144493);
+            
+        
+
+        marker_489c43d3becf3d991091ff2e8566aa46.bindPopup(popup_c4347dbb9b622bac5b2d790128a5ebbf)
+        ;
+
+        
+    
+    
+                marker_489c43d3becf3d991091ff2e8566aa46.setIcon(icon_a4c26e5d2d4369fcbea692925fea3832);
+            
+    
+            var marker_73a440502370f8fab597178f784ea30c = L.marker(
+                [40.843, 14.26],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_9f9276a2b20aedaab10b5fe889029650 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_301ff99854c1184d74e652d7009c8c9d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9417b0a5c6b8d3ef997a02040ccc0e1e = $(`<div id="html_9417b0a5c6b8d3ef997a02040ccc0e1e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Porky’s</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Napoli</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "l’Alchemy, il Porky’s e tanti altri..."         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Informazioni storiche non disponibili.         </p>     </div>     </div>`)[0];
+                popup_301ff99854c1184d74e652d7009c8c9d.setContent(html_9417b0a5c6b8d3ef997a02040ccc0e1e);
+            
+        
+
+        marker_73a440502370f8fab597178f784ea30c.bindPopup(popup_301ff99854c1184d74e652d7009c8c9d)
+        ;
+
+        
+    
+    
+                marker_73a440502370f8fab597178f784ea30c.setIcon(icon_9f9276a2b20aedaab10b5fe889029650);
+            
+    
+            var marker_a42ce6c76d44594f5b7a0371e6e86cbe = L.marker(
+                [40.8495, 14.2575],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_6002102b567187dd5bd8c05f881fdb42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a09d058df0a8cb968cb85878cb3d16a8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_69a851babd18786ebaf1981007945b0d = $(`<div id="html_69a851babd18786ebaf1981007945b0d" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Riot</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Centro Storico</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "il Riot a Palazzo Donn’Anna a Spaccanapoli"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Laboratorio musicale e sociale nel cuore di Spaccanapoli.         </p>     </div>     </div>`)[0];
+                popup_a09d058df0a8cb968cb85878cb3d16a8.setContent(html_69a851babd18786ebaf1981007945b0d);
+            
+        
+
+        marker_a42ce6c76d44594f5b7a0371e6e86cbe.bindPopup(popup_a09d058df0a8cb968cb85878cb3d16a8)
+        ;
+
+        
+    
+    
+                marker_a42ce6c76d44594f5b7a0371e6e86cbe.setIcon(icon_6002102b567187dd5bd8c05f881fdb42);
+            
+    
+            var marker_f9cb0ea00c340c32886dbbaa0e598913 = L.marker(
+                [40.8498, 14.2523],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_2a7f0cce562df3cd33501e9f237d9cad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1955705caac21292715ba05be8b79b1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_02dfe68c377b4cdf859fb367b144c3e6 = $(`<div id="html_02dfe68c377b4cdf859fb367b144c3e6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Rock and roll</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Centro Storico</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "il Rock and roll a Piazza Bellini"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Informazioni storiche non disponibili.         </p>     </div>     </div>`)[0];
+                popup_a1955705caac21292715ba05be8b79b1.setContent(html_02dfe68c377b4cdf859fb367b144c3e6);
+            
+        
+
+        marker_f9cb0ea00c340c32886dbbaa0e598913.bindPopup(popup_a1955705caac21292715ba05be8b79b1)
+        ;
+
+        
+    
+    
+                marker_f9cb0ea00c340c32886dbbaa0e598913.setIcon(icon_2a7f0cce562df3cd33501e9f237d9cad);
+            
+    
+            var marker_c6e3b6a6fd5051600e7f7046839a0e0d = L.marker(
+                [40.852, 14.268],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_ec5d38ecd327c798e9c1ddb5b0e87440 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_59c68dca6dcea8f7b460c3217130f05f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2516183cb33497a7f4327c27f2c11136 = $(`<div id="html_2516183cb33497a7f4327c27f2c11136" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Rockery Nook</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Centro</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "il Rockery Nook, il Sensemilla, il Caffè della Luna"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Sito originariamente in Corso Garibaldi.         </p>     </div>     </div>`)[0];
+                popup_59c68dca6dcea8f7b460c3217130f05f.setContent(html_2516183cb33497a7f4327c27f2c11136);
+            
+        
+
+        marker_c6e3b6a6fd5051600e7f7046839a0e0d.bindPopup(popup_59c68dca6dcea8f7b460c3217130f05f)
+        ;
+
+        
+    
+    
+                marker_c6e3b6a6fd5051600e7f7046839a0e0d.setIcon(icon_ec5d38ecd327c798e9c1ddb5b0e87440);
+            
+    
+            var marker_0d6c487c3fe847d61a9bb067e4a6c452 = L.marker(
+                [40.834, 14.2425],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_4899780c34e566a1fb8bc68a65db57f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_80ae32601e57346a8db998bbf876a9ab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_29119299256792720882013d9e8b6d74 = $(`<div id="html_29119299256792720882013d9e8b6d74" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Room Kay</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Chiaia</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "Room Kay nella zone di Piazza dei Martiri"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Spazio notturno nelle vicinanze di Piazza dei Martiri.         </p>     </div>     </div>`)[0];
+                popup_80ae32601e57346a8db998bbf876a9ab.setContent(html_29119299256792720882013d9e8b6d74);
+            
+        
+
+        marker_0d6c487c3fe847d61a9bb067e4a6c452.bindPopup(popup_80ae32601e57346a8db998bbf876a9ab)
+        ;
+
+        
+    
+    
+                marker_0d6c487c3fe847d61a9bb067e4a6c452.setIcon(icon_4899780c34e566a1fb8bc68a65db57f4);
+            
+    
+            var marker_945dd5ac344745528c97a7c6941b0764 = L.marker(
+                [40.835, 14.2415],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_5242bb601285161179b878352f419a01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_994a625a607addfb1a127ef70d84f876 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e04b8d594f7196904f27b2df0b2d774 = $(`<div id="html_2e04b8d594f7196904f27b2df0b2d774" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">San Carluccio</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             TEATRO         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Chiaia</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "tra i più rinomati il Teatro del Garage, Teatro Nuovo, Teatro Ausonia e San Carluccio."         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Teatro intimo e fulcro di musica d'avanguardia in Via S. Pasquale.         </p>     </div>     </div>`)[0];
+                popup_994a625a607addfb1a127ef70d84f876.setContent(html_2e04b8d594f7196904f27b2df0b2d774);
+            
+        
+
+        marker_945dd5ac344745528c97a7c6941b0764.bindPopup(popup_994a625a607addfb1a127ef70d84f876)
+        ;
+
+        
+    
+    
+                marker_945dd5ac344745528c97a7c6941b0764.setIcon(icon_5242bb601285161179b878352f419a01);
+            
+    
+            var marker_a993410e60b5661205d19bc42b7dbec6 = L.marker(
+                [40.945, 14.37],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_7ccad650c9f5a34d17551e8c61e72516 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a7f855b31bfa5889e30823eb9e4e19f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a4019eb029b7466abe2fa682e2fb0e5b = $(`<div id="html_a4019eb029b7466abe2fa682e2fb0e5b" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Segnali di Accelerazione</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CENTRO SOCIALE         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Acerra</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "centri sociali come il Segnali di Accelerazione (nell’entroterra Acerrano)"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Informazioni storiche non disponibili.         </p>     </div>     </div>`)[0];
+                popup_4a7f855b31bfa5889e30823eb9e4e19f.setContent(html_a4019eb029b7466abe2fa682e2fb0e5b);
+            
+        
+
+        marker_a993410e60b5661205d19bc42b7dbec6.bindPopup(popup_4a7f855b31bfa5889e30823eb9e4e19f)
+        ;
+
+        
+    
+    
+                marker_a993410e60b5661205d19bc42b7dbec6.setIcon(icon_7ccad650c9f5a34d17551e8c61e72516);
+            
+    
+            var marker_5bdb173612bbbcb5c29fde6aeb081c2f = L.marker(
+                [40.8354, 14.2389],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_2a2eca69d6f6f72ea1a7f6a54b069eca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c75d6b08c54a089bfd2727d682e259b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b0bc973db25394fd1fe5320e4c62d076 = $(`<div id="html_b0bc973db25394fd1fe5320e4c62d076" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Sensemilla</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Chiaia</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "Era l'immagine dei club napoletani anni '80 nelle parole di Alvaro Mirabelli, giornalista e socio del "Sinsemilla Bar" di via Belledonne a Chiaia"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Bar e punto di aggregazione fondamentale nei baretti di Chiaia.         </p>     </div>     </div>`)[0];
+                popup_c75d6b08c54a089bfd2727d682e259b3.setContent(html_b0bc973db25394fd1fe5320e4c62d076);
+            
+        
+
+        marker_5bdb173612bbbcb5c29fde6aeb081c2f.bindPopup(popup_c75d6b08c54a089bfd2727d682e259b3)
+        ;
+
+        
+    
+    
+                marker_5bdb173612bbbcb5c29fde6aeb081c2f.setIcon(icon_2a2eca69d6f6f72ea1a7f6a54b069eca);
+            
+    
+            var marker_b99b43e3f7181707db303484d924413a = L.marker(
+                [40.8436, 14.2411],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_700baaf309ad7f9a4d56100f9d3e6889 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2b0650ba2f77e0b76616229d80095bf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b25502526672821491cf474369a54be2 = $(`<div id="html_b25502526672821491cf474369a54be2" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Seventh Sky</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Vomero</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "resiste dagli anni Settanta il Seventh Sky a San Martino"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Nota discoteca situata in Largo San Martino.         </p>     </div>     </div>`)[0];
+                popup_e2b0650ba2f77e0b76616229d80095bf.setContent(html_b25502526672821491cf474369a54be2);
+            
+        
+
+        marker_b99b43e3f7181707db303484d924413a.bindPopup(popup_e2b0650ba2f77e0b76616229d80095bf)
+        ;
+
+        
+    
+    
+                marker_b99b43e3f7181707db303484d924413a.setIcon(icon_700baaf309ad7f9a4d56100f9d3e6889);
+            
+    
+            var marker_9af9c8e090665bcba186ae26a9e1d820 = L.marker(
+                [40.8465, 14.252],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_e14f94808b6f37200fe0898c10acf215 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cc5a6de3e050af9e14a7c5926fd0ce9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3b3a81e17fd38d3ea2568c230c5b30de = $(`<div id="html_3b3a81e17fd38d3ea2568c230c5b30de" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">SKA</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CENTRO SOCIALE         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Centro Storico</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "l’esperienza dello SKA (Laboratorio Occupato di Sperimentazione e Kultura Antagonista), nato sull’onda delle lotte studentesche del 1994"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Centro per concerti punk e ska situato a Calata Trinità Maggiore.         </p>     </div>     </div>`)[0];
+                popup_5cc5a6de3e050af9e14a7c5926fd0ce9.setContent(html_3b3a81e17fd38d3ea2568c230c5b30de);
+            
+        
+
+        marker_9af9c8e090665bcba186ae26a9e1d820.bindPopup(popup_5cc5a6de3e050af9e14a7c5926fd0ce9)
+        ;
+
+        
+    
+    
+                marker_9af9c8e090665bcba186ae26a9e1d820.setIcon(icon_e14f94808b6f37200fe0898c10acf215);
+            
+    
+            var marker_df9f66f43b8c63142669338192e9eaf8 = L.marker(
+                [40.828, 14.193],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_610f9e9aa3f1889ef55a31fe84479d08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa6d93213d689af8fbf03406c1e4f3da = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1c492f822a4b2cb0977cb3d292b76117 = $(`<div id="html_1c492f822a4b2cb0977cb3d292b76117" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Stadio Maradona</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             ALTRO         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Fuorigrotta</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "Massive Attack e Portishead che in quegli anni frequenteranno molto la città (incluso lo stadio) di Napoli."         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Sede di grandi manifestazioni ed eventi musicali internazionali.         </p>     </div>     </div>`)[0];
+                popup_aa6d93213d689af8fbf03406c1e4f3da.setContent(html_1c492f822a4b2cb0977cb3d292b76117);
+            
+        
+
+        marker_df9f66f43b8c63142669338192e9eaf8.bindPopup(popup_aa6d93213d689af8fbf03406c1e4f3da)
+        ;
+
+        
+    
+    
+                marker_df9f66f43b8c63142669338192e9eaf8.setIcon(icon_610f9e9aa3f1889ef55a31fe84479d08);
+            
+    
+            var marker_ff1e0a65c83d313857df905d29223adf = L.marker(
+                [40.837, 14.238],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_e9ad14c01810bd18f530c42831d41e60 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99632189e894dd6b4b430979cf1de3c5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_93c906816be605966f7f253f2fc963d6 = $(`<div id="html_93c906816be605966f7f253f2fc963d6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Teatro del Garage</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             TEATRO         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Chiaia</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "tra i più rinomati il Teatro del Garage, Teatro Nuovo, Teatro Ausonia e San Carluccio."         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Informazioni storiche non disponibili.         </p>     </div>     </div>`)[0];
+                popup_99632189e894dd6b4b430979cf1de3c5.setContent(html_93c906816be605966f7f253f2fc963d6);
+            
+        
+
+        marker_ff1e0a65c83d313857df905d29223adf.bindPopup(popup_99632189e894dd6b4b430979cf1de3c5)
+        ;
+
+        
+    
+    
+                marker_ff1e0a65c83d313857df905d29223adf.setIcon(icon_e9ad14c01810bd18f530c42831d41e60);
+            
+    
+            var marker_770ba3814f770df631b1150dd9b97ff8 = L.marker(
+                [40.8423, 14.2465],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_2441b6bfe2055415843b9af4137568bc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3c911658bff3b536abe49d26e88573f7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c85b15efc469feef910840f99bc297a5 = $(`<div id="html_c85b15efc469feef910840f99bc297a5" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Teatro Nuovo</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             TEATRO         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Quartieri Spagnoli</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "tra i più rinomati il Teatro del Garage, Teatro Nuovo, Teatro Ausonia e San Carluccio."         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Importante polo culturale nel cuore dei Quartieri Spagnoli.         </p>     </div>     </div>`)[0];
+                popup_3c911658bff3b536abe49d26e88573f7.setContent(html_c85b15efc469feef910840f99bc297a5);
+            
+        
+
+        marker_770ba3814f770df631b1150dd9b97ff8.bindPopup(popup_3c911658bff3b536abe49d26e88573f7)
+        ;
+
+        
+    
+    
+                marker_770ba3814f770df631b1150dd9b97ff8.setIcon(icon_2441b6bfe2055415843b9af4137568bc);
+            
+    
+            var marker_cdcf1a80b73231c00ccf10976e44f85d = L.marker(
+                [40.835, 14.19],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_1c55f6dfb2ea18389476071ec09f3787 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_52e1493fa2f1b75d58ccd12a61b02f13 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2f7e7cac6a838ad1d74a333e93773d3f = $(`<div id="html_2f7e7cac6a838ad1d74a333e93773d3f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Tienamment</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CENTRO SOCIALE         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Rione Traiano</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "in seguito daranno vita, al Rione Traiano, al primo centro sociale cittadino, il Tienamment"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Storico centro sociale di Soccavo/Rione Traiano.         </p>     </div>     </div>`)[0];
+                popup_52e1493fa2f1b75d58ccd12a61b02f13.setContent(html_2f7e7cac6a838ad1d74a333e93773d3f);
+            
+        
+
+        marker_cdcf1a80b73231c00ccf10976e44f85d.bindPopup(popup_52e1493fa2f1b75d58ccd12a61b02f13)
+        ;
+
+        
+    
+    
+                marker_cdcf1a80b73231c00ccf10976e44f85d.setIcon(icon_1c55f6dfb2ea18389476071ec09f3787);
+            
+    
+            var marker_f98c04aa1d1650adeca40604b104a64a = L.marker(
+                [41.0705, 14.3328],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_60d406d482fa5bb94b0b09c774a1067b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9304798eb24023c172e3ce344c2e0754 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41207928ceae1a1d0af839ad4ce4b75b = $(`<div id="html_41207928ceae1a1d0af839ad4ce4b75b" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Tifata</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             DISCOTECA         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Caserta</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "il Tifata di Caserta"         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Punto di riferimento della notte per l'hinterland casertano.         </p>     </div>     </div>`)[0];
+                popup_9304798eb24023c172e3ce344c2e0754.setContent(html_41207928ceae1a1d0af839ad4ce4b75b);
+            
+        
+
+        marker_f98c04aa1d1650adeca40604b104a64a.bindPopup(popup_9304798eb24023c172e3ce344c2e0754)
+        ;
+
+        
+    
+    
+                marker_f98c04aa1d1650adeca40604b104a64a.setIcon(icon_60d406d482fa5bb94b0b09c774a1067b);
+            
+    
+            var marker_541ecfb5066494056bc36a6def525170 = L.marker(
+                [40.8467, 14.252],
+                {
+}
+            ).addTo(map_e11afd552ac6a009dbbb4ded527bde7f);
+        
+    
+            var icon_1caac2a53688f867d0c407aea553c6bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_35fb1a86a9a9e452779505ee77e39cab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ec1f57a6b9a57b0c08cc537af375d122 = $(`<div id="html_ec1f57a6b9a57b0c08cc537af375d122" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-family: Arial, sans-serif;">         <h4 style="color: #e74c3c; margin-bottom: 5px;">Velvet</h4>         <span style="background-color: #2980b9; color: white; padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;">             CLUB         </span>         <span style="color: gray; font-size: 11px; margin-left: 5px;">📍 Centro Storico</span>         <hr style="margin: 10px 0; border: 0; border-top: 1px solid #ddd;">         <p style="font-size: 12px; font-style: italic; color: #555; background-color: #f9f9f9; padding: 5px; border-left: 3px solid #e74c3c;">             "il Velvet allo stesso modo sarà punto di incontro dei nuovi fermenti culturali cittadini."         </p>         <p style="font-size: 12px; margin-top: 5px;">             <b>Note:</b> Situato in Via Cisterna dell'Olio, è stato la culla della scena rock underground e new wave napoletana.         </p>     </div>     </div>`)[0];
+                popup_35fb1a86a9a9e452779505ee77e39cab.setContent(html_ec1f57a6b9a57b0c08cc537af375d122);
+            
+        
+
+        marker_541ecfb5066494056bc36a6def525170.bindPopup(popup_35fb1a86a9a9e452779505ee77e39cab)
+        ;
+
+        
+    
+    
+                marker_541ecfb5066494056bc36a6def525170.setIcon(icon_1caac2a53688f867d0c407aea553c6bb);
+            
+</script>
+</html>
